@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   # end
   # post "/graphql", to: "graphql#execute"
-  resources :founds 
+  resources :users
 
   # get '/founds', to: 'founds#index'
   # get '/founds/new', to: 'founds#new'
-  # post '/founds', to: 'founds#create'
+  # post '/founds/new', to: 'founds#create' 
 
   root "pages#index"
 

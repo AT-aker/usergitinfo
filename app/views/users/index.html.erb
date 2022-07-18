@@ -1,0 +1,11 @@
+﻿<h1> GitHub user information</h1>
+
+<% @users.each do |user| %>
+  <h2><%= user.login %></h2>
+
+  <p>
+  <br>
+  <%= link_to 'Show', user_path(user)%> | 
+  <%= link_to 'Delete', user_path(user), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  </p>
+<% end %>
