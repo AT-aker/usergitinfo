@@ -1,6 +1,9 @@
-﻿<h1><%= @user.login%></h1>
+﻿<h1><%= @user.login %></h1>
 
-<p>
-  <%= @user.full_name%>
+<div>
+  <h2><%= @user.full_name %></h2>
+  <% @repos.each do |r|  %>
+  <p><%= r.name %></p>
+  <% end %>
 
-</p>
+</div>

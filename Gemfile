@@ -20,6 +20,8 @@ gem "importmap-rails"
 
 gem "graphql"
 
+gem 'graphql-client'
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
