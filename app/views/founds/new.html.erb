@@ -1,0 +1,11 @@
+﻿<h1>Find user</h1>
+
+<%= form_with model: @user do |f| %>
+  <div>
+    <%= f.label :login %>
+    <%= f.text_field :login, required: true, minlength: 3, placeholder: 'Github login input here'%>
+  </div>
+
+  <%= f.submit 'Submit login'%>
+
+<% end %>
