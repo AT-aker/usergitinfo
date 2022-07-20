@@ -1,6 +1,7 @@
-﻿# frozen_string_literal: true
-# Controller for search and pars github user for his login 
-# and return name and all repositories  
+# frozen_string_literal: true
+
+# Controller for search and pars github user for his login
+# and return name and all repositories
 
 require 'graphql'
 require 'json'
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
     user_1 = git_info 'https://api.github.com/users/%s', format('%s', @user.login)
     @user['full_name'] = user_1['name']
     rep = git_repo_list(@user.login)
-    for i in rep do
+    rep.each do |i|
       repo = @user.repos.build(name: format('%s', i))
     end
     if @user.save
@@ -60,8 +61,8 @@ class UsersController < ApplicationController
   def git_repo_list(login)
     data_1 = git_info 'https://api.github.com/users/%s/repos', format('%s', login)
     data_2 = []
-    for i in data_1 do
-      for k, v in i do
+    data_1.each do |i|
+      i.each do |k, v|
         data_2 << v if k == 'name'
       end
     end

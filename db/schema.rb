@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_718_071_906) do
+ActiveRecord::Schema[7.0].define(version: 20_220_719_154_025) do
   create_table 'repos', force: :cascade do |t|
     t.string 'name'
     t.integer 'user_id', null: false

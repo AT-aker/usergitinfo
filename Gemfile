@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -57,6 +59,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   # JSLint on Rails is a Ruby library which lets you run the JSLint JavaScript code checker on your Javascript code easily.
   gem 'jslint_on_rails'
+  gem 'rails-controller-testing'
   gem 'rubocop', require: false
 end
 
@@ -78,3 +81,4 @@ group :test do
   gem 'webdrivers'
 end
 gem 'graphiql-rails', group: :development
+gem 'rspec-rails', group: %i[development test]
